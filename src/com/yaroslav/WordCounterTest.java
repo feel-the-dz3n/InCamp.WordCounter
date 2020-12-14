@@ -36,4 +36,22 @@ class WordCounterTest {
         assertEquals(2, wordsMap.get("to"));
         assertEquals(2, wordsMap.get("like"));
     }
+
+    @org.junit.jupiter.api.Test
+    void countWords_Test2__UseCase() {
+        String text = "My name is Yaroslav. I like pizza. And I like programming. This is my purpose: to eat and to code.";
+
+        // Counting words
+        var wordsMap = WordCounter.countWords(text, false);
+
+        assertEquals(16, wordsMap.size());
+
+        assertEquals(2, wordsMap.get("I"));
+        assertEquals(2, wordsMap.get("my"));
+        assertEquals(2, wordsMap.get("is"));
+        assertEquals(2, wordsMap.get("to"));
+        assertEquals(2, wordsMap.get("like"));
+        assertEquals(1, wordsMap.get("and"));
+        assertEquals(1, wordsMap.get("And"));
+    }
 }

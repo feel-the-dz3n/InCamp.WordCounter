@@ -47,7 +47,8 @@ class WordCounterTest {
         assertEquals(16, wordsMap.size());
 
         assertEquals(2, wordsMap.get("I"));
-        assertEquals(2, wordsMap.get("my"));
+        assertEquals(1, wordsMap.get("my"));
+        assertEquals(1, wordsMap.get("My"));
         assertEquals(2, wordsMap.get("is"));
         assertEquals(2, wordsMap.get("to"));
         assertEquals(2, wordsMap.get("like"));
